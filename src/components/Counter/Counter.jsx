@@ -1,0 +1,25 @@
+import React, { useState } from 'react'
+
+export default function Counter() {
+	const [count, setCount] = useState([]);
+	const increment = () => {
+		// setCount([...count, '+1']); 
+		setCount(prev => prev + 1);
+		setCount(prev => prev + 1);
+
+	}
+	const decrement = () => {
+		// setCount([...count, '-1']);
+		setCount(prev => prev - 1);
+		setCount(prev => prev - 1);
+
+	}
+	return (
+		<div>
+			<p>{count}</p>
+			<button onClick={increment}>+</button>
+			<button onClick={decrement}>-</button>
+			{/* {count.map(t => <p>{t}</p>)} */}
+		</div>
+	)
+}
